@@ -54,7 +54,7 @@ RCT_EXPORT_MODULE();
   if ((self = [super initWithFrame:frame])) {
     _sizeUpdated = NO;
 
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[RCTSharedApplication() delegate];
 
     _resizableRootView = [[RCTRootView alloc] initWithBridge:appDelegate.bridge
                                                   moduleName:@"RootViewSizeFlexibilityExampleApp"

@@ -47,7 +47,7 @@ RCT_EXPORT_MODULE();
   if (self) {
     _beige = YES;
 
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[RCTSharedApplication() delegate];
 
     _rootView = [[RCTRootView alloc] initWithBridge:appDelegate.bridge
                                          moduleName:@"SetPropertiesExampleApp"
